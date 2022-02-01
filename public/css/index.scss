@@ -385,7 +385,7 @@ p {
             }
 
             .content {
-                height: 45rem;
+                height: 60rem;
                 border-radius: 2px;
                 border: 1px solid #ccc;
                 background-color: #fafaff;
@@ -399,14 +399,11 @@ p {
         }
 
         .form {
+            position: relative;
             padding: 3rem;
 
             h2 {
                 padding: 1rem 0;
-            }
-
-            input {
-                // margin-bottom: 1rem;
             }
 
             .events {
@@ -436,6 +433,21 @@ p {
                             }
                         }
                     }
+                }
+            }
+
+            &::after {
+                content: '';
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba($color: rgb(255, 255, 255), $alpha: .9);
+                position: absolute;
+            }
+            &.accept {
+                &::after {
+                    display: none;
                 }
             }
         }
@@ -549,9 +561,11 @@ p {
         .container {
             .terms {
                 .content {
-                    height: 50vh;
+                    height: fit-content;
+                    overflow: auto;
                 }
             }
         }
     }
+
 }

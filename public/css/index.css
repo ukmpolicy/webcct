@@ -420,7 +420,7 @@ p {
 }
 
 #registration .container .terms .content {
-  height: 45rem;
+  height: 60rem;
   border-radius: 2px;
   border: 1px solid #ccc;
   background-color: #fafaff;
@@ -433,6 +433,7 @@ p {
 }
 
 #registration .container .form {
+  position: relative;
   padding: 3rem;
 }
 
@@ -471,6 +472,20 @@ p {
 
 #registration .container .form .events .row .col-4 .event .price {
   opacity: .8;
+}
+
+#registration .container .form::after {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+}
+
+#registration .container .form.accept::after {
+  display: none;
 }
 
 @media (max-width: 800px) {
@@ -544,7 +559,10 @@ p {
     display: block;
   }
   #registration .container .terms .content {
-    height: 50vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    overflow: auto;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -49,3 +49,7 @@ $('#navbar .link').click(() => {
     $('#navbar').toggleClass('show')
     $('#header').toggleClass('show-navbar')
 })
+
+$('#term').click(() => {
+    $('.form').toggleClass('accept');
+})

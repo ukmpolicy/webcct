@@ -6,7 +6,7 @@
     <header id="header" style="background-image: url({{ asset('images/278042.png') }});">
         <div class="container">
             <h1>Cyber Competition And Talkshow</h1>
-            <p class="container-d">Mengembangkan Potensi Local Dalam Menghadapi Era Digital Bersama Linux</p>
+            <p class="container-d">Mengembangkan Potensi Masyarakat Dalam Menghadapi Era Digital Bersama Linux</p>
         </div>
     </header>
 
@@ -19,14 +19,14 @@
                 <div class="section-icon">
                     <img src="{{ asset('images/head.svg') }}" alt="section icon">
                 </div>
-                <h2>About</h2>
+                <h2>Tentang</h2>
             </div>
 
             <div class="row mt-5 container-d">
 
                 <!-- About -->
                 <div class="col-md-6">
-                    <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus magnam minus dicta esse reiciendis saepe tempora temporibus quod, veniam voluptate quisquam, ducimus harum quia dolores voluptates architecto! Blanditiis, exercitationem voluptatibus?</p>
+                    <p class="">Cyber Competition And Talkshow adalah suatu acara besar yang diadakan oleh Unit Kegiatan Mahasiswa Polytechnic Linux Community. Acara ini bermaksud untuk memasyarakat linux melalui ajang perlombaan dan talkshow.</p>
                 </div>
 
                 <!-- Rundown -->
@@ -38,8 +38,8 @@
                             <div class="event">
                                 <div class="name"><i class="far fa-circle small fa-fw"></i> Typing Speed</div>
                                 <div class="date">
-                                    <i class="far fa-calendar-alt fa-fw"></i> <span>04 March 2022</span> 
-                                    <i class="far fa-clock fa-fw"></i> <span>09.00 - 12.00</span>
+                                    <i class="far fa-calendar-alt fa-fw"></i> <span>04 Maret 2022</span> 
+                                    <i class="far fa-clock fa-fw"></i> <span>15.00 - 17.00</span>
                                 </div>
                             </div>
 
@@ -47,7 +47,7 @@
                             <div class="event">
                                 <div class="name"><i class="far fa-circle small fa-fw"></i> Design Poster</div>
                                 <div class="date">
-                                    <i class="far fa-calendar-alt fa-fw"></i> <span>05 March 2022</span> 
+                                    <i class="far fa-calendar-alt fa-fw"></i> <span>05 Maret 2022</span> 
                                     <i class="far fa-clock fa-fw"></i> <span>09.00 - 12.00</span>
                                 </div>
                             </div>
@@ -59,7 +59,7 @@
                             <div class="event">
                                 <div class="name"><i class="far fa-circle small fa-fw"></i> Linux Server</div>
                                 <div class="date">
-                                    <i class="far fa-calendar-alt fa-fw"></i> <span>04 March 2022</span> 
+                                    <i class="far fa-calendar-alt fa-fw"></i> <span>05 Maret 2022</span> 
                                     <i class="far fa-clock fa-fw"></i> <span>14.00 - 17.00</span>
                                 </div>
                             </div>
@@ -68,8 +68,8 @@
                             <div class="event">
                                 <div class="name"><i class="far fa-circle small fa-fw"></i> Talkshow</div>
                                 <div class="date">
-                                    <i class="far fa-calendar-alt fa-fw"></i> <span>06 March 2022</span> 
-                                    <i class="far fa-clock fa-fw"></i> <span>09.00 - 12.00</span>
+                                    <i class="far fa-calendar-alt fa-fw"></i> <span>06 Maret 2022</span> 
+                                    <i class="far fa-clock fa-fw"></i> <span>08.00 - 12.00</span>
                                 </div>
                             </div>
 
@@ -97,8 +97,8 @@
                 <div class="row">
                     <!-- About -->
                     <div class="col-md-4 pt-1 pb-3">
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat ipsa illum adipisci ea vitae, ratione minus impedit repudiandae quae ipsum nam quos laboriosam fuga doloremque numquam earum reiciendis. Consectetur, provident!</p>
-                        <a href="{{ route('registration.competition') }}" class="btn-default">Register Now</a>
+                        <p>Saatnya anda menunjukan kompetensi yang anda miliki melalui ajang perlombaan yang sangat luar biasa. Dirancang oleh para ahli pada bidangnya dengan harga pendaftaran yang terjangkau. Anda juga dapat mengikuti acara Talkshow secara langsung.</p>
+                        <a href="{{ route('registration.competition') }}" class="btn-default">DAFTARKAN SEKARANG</a>
                     </div>
     
                     <!-- Competitions -->
@@ -112,8 +112,8 @@
                                         <img src="{{ asset('images/server.png') }}" alt="trophy">
                                     </div>
                                     <h5>Linux Server</h5>
-                                    <div class="price">Rp 30.000</div>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, explicabo!</p>
+                                    <div class="price">Rp 40.000</div>
+                                    <p>Membangun suatu server berdasarkan modul yang diberikan</p>
                                 </div>
                             </div>
     
@@ -123,9 +123,9 @@
                                     <div class="icon">
                                         <img src="{{ asset('images/design.png') }}" alt="trophy">
                                     </div>
-                                    <h5>Desain Poster</h5>
-                                    <div class="price">Rp 30.000</div>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, explicabo!</p>
+                                    <h5>Design Poster</h5>
+                                    <div class="price">Rp 40.000</div>
+                                    <p>Merancang dan mendesain suatu poster yang kreatif berdasarkan tema yang telah di tentukan</p>
                                 </div>
                             </div>
     
@@ -137,7 +137,7 @@
                                     </div>
                                     <h5>Typing Speed</h5>
                                     <div class="price">Rp 30.000</div>
-                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, explicabo!</p>
+                                    <p>Menguji kecepatan mengetik menggunakan aplikasi dan kata - kata yang ditentukan</p>
                                 </div>
                             </div>
     
@@ -164,9 +164,11 @@
                 </div>
                 
                 <!-- Promot Talkshow -->
-                <div class="containter-d">
-                    <p class="text-capitalize">Lorem ipsum dolor sit amet consectetur adipisicing elit Saepe soluta repellendus nemo voluptatibus commodi facilis</p>
-                    <a href="" class="btn-default">Register Now</a>
+                <div class="">
+                    <p class="text-capitalize">Mari mengenal dan belajar terkait Linux dan Bahayanya Ransomware bersama para pakar dan ahli di bidangnya.</p>
+                    
+                    {{-- <p class="text-capitalize">Mari mengenal dan belajar terkait Linux dan Bahayanya Ransomware bersama bapak Ghaly Bayhaqi RM seorang Aktivis Linux Activis & Cyber Security Research dan juga bapak xxxxxxxxx seorang para pakar di bidang xxxxxxxxxx.</p> --}}
+                    <a href="#" class="btn-default" onclick="event.preventDefault()">S E G E R A</a>
                 </div>
 
             </div>
@@ -177,29 +179,39 @@
     <section id="contact">
         <div class="container">
             
-            <!-- Header -->
-            <div class="section-header">
-                <div class="section-icon">
-                    <img src="{{ asset('images/head.svg') }}" alt="section icon">
-                </div>
-                <h2>Contact</h2>
-            </div>
+            <div class="row">
+                <div class="col-md-6 m-auto">
 
-            <!-- Form -->
-            <form action="" class="contained-d">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Email">
+                    <!-- Header -->
+                    <div class="section-header">
+                        <div class="section-icon">
+                            <img src="{{ asset('images/head.svg') }}" alt="section icon">
+                        </div>
+                        <h2>Hubungi Kami</h2>
+                    </div>
+        
+                    <!-- Form -->
+                    <form action="{{ route('mail.store') }}" method="POST" class="contained-d">
+                        @csrf
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nama" name="name">
+                            @error('name') <div class="text-danger" style="font-size: 12px">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="form-group mt-3">
+                            <input type="text" class="form-control" placeholder="Email" name="email">
+                            @error('email') <div class="text-danger" style="font-size: 12px">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="form-group mt-3">
+                            <textarea cols="30" rows="10" class="form-control" placeholder="Konten" name="content"></textarea>
+                            @error('content') <div class="text-danger" style="font-size: 12px">{{ $message }}</div> @enderror
+                        </div>
+                        <div class="form-group mt-3">
+                            <button class="btn w-100 btn-default">SEND</button>
+                        </div>
+                    </form>
+
                 </div>
-                <div class="form-group mt-3">
-                    <input type="text" class="form-control" placeholder="Subject">
-                </div>
-                <div class="form-group mt-3">
-                    <textarea cols="30" rows="10" class="form-control" placeholder="Content"></textarea>
-                </div>
-                <div class="form-group mt-3">
-                    <button class="btn w-100 btn-default">SEND</button>
-                </div>
-            </form>
+            </div>
 
         </div>
     </section>
@@ -220,12 +232,12 @@
             <div class="owl-carousel owl-theme">
                 <div class="item">
                     <div class="logo">
-                        <img src="{{ asset('images/logo_policy.png') }}" alt="">
+                        <img src="{{ asset('images/sponsors/long_story.png') }}" alt="Long Story">
                     </div>
                 </div>
                 <div class="item">
                     <div class="logo">
-                        <img src="{{ asset('images/logo_policy.png') }}" alt="">
+                        <img src="{{ asset('images/sponsors/alkaysan.png') }}" alt="">
                     </div>
                 </div>
             </div>

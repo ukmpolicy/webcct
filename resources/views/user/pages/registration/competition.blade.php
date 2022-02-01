@@ -111,7 +111,7 @@
                                 <div class="small text-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="small mt-3 text-black-50"><sub>*</sub> Note: Secara otomatis anda akan terdaftar kedalam acara talkshow walaupun tidak memilih mata lomba.</div>
+                        <div class="small mt-3 text-black-50"><sub>*</sub> Note: Secara otomatis anda akan terdaftar pada acara talkshow.</div>
                         <div class="form-group mt-3">
                             <button class="btn w-100 btn-default">DAFTAR</button>
                         </div>

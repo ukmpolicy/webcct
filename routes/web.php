@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\MailController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,6 +61,23 @@ Route::prefix('manager')->group(function() {
         ->name('user.destroy');
     });
     
+    Route::prefix('mail')->middleware('auth')->group(function() {
+        Route::get('/', [MailController::class, 'index'])
+        ->name('mail');
+
+        Route::post('/', [MailController::class, 'store'])
+        ->name('mail.store');
+        
+        Route::post('/reply/{id}', [MailController::class, 'reply'])
+        ->name('mail.reply');
+        
+        Route::get('/show/{id}', [MailController::class, 'show'])
+        ->name('mail.detail');
+        
+        Route::delete('/{id}', [MailController::class, 'destroy'])
+        ->name('mail.destroy');
+    });
+
 });
 
 Route::prefix('registration')->group(function() {

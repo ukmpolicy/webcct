@@ -33,36 +33,13 @@
                     </p>
                 </a>
             </li>
-{{-- 
+            
             <li class="nav-item">
-                <a href="#" class="nav-link">
-                    <i class="nav-icon fas fa-users"></i>
-                    <p>
-                        Kepengurusan
-                        <i class="right fas fa-angle-left"></i>
-                    </p>
+                <a href="{{ route('mail') }}" class="nav-link">
+                    <i class="nav-icon fas fa-envelope"></i>
+                    <p>Masukan</p>
                 </a>
-                <ul class="nav nav-treeview">
-                    <li class="nav-item">
-                        <a href="{{ route('member') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Anggota</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('office') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Pengurus</p>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('division') }}" class="nav-link">
-                            <i class="far fa-circle nav-icon"></i>
-                            <p>Bidang</p>
-                        </a>
-                    </li>
-                </ul>
-            </li> --}}
+            </li>
 
             <li class="nav-header">LAINNYA</li>
 

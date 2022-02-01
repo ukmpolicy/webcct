@@ -69,6 +69,7 @@ p {
     // position: fixed;
     display: flex;
     align-items: center;
+    z-index: 100;
     
     .container {
         display: flex;
@@ -78,6 +79,7 @@ p {
         .logo {
             height: 4rem;
             padding: 0 1rem;
+            z-index: 100;
             display: flex;
             background-color: $default;
             align-items: center;
@@ -91,6 +93,7 @@ p {
             color: white;
             padding: 0 .5rem;
             cursor: pointer;
+            z-index: 100;
             opacity: .8;
             transition: .1s;
             display: none;
@@ -188,17 +191,13 @@ p {
                         }
                     }
                 }
+                // .event {
+                //     background-color: $default;
 
-                &:nth-child(even) {
-                    
-                    .event {
-                        background-color: $default;
-
-                        &:nth-child(even) {
-                            background-color: $alternative;
-                        }
-                    }
-                }
+                //     &:nth-child(even) {
+                //         background-color: $alternative;
+                //     }
+                // }
             }
 
             &::after {
@@ -265,10 +264,6 @@ p {
             padding-top: 5rem;
             padding-bottom: 5rem;
             color: white;
-    
-            .container {
-                padding: 5rem 0;
-            }
 
             h2 {
                 margin-bottom: 1rem;
@@ -451,16 +446,17 @@ p {
     #navbar {
         .container {
             .navs {
-                display: none;
                 position: absolute;
-                // display: block;
+                display: block;
                 text-align: center;
                 left: 0;
-                top: 4rem;
+                top: -100vh;
+                opacity: 0;
                 background-color: #0b343b;
                 right: 0;
-                bottom: 0;
+                height: 100vh;
                 padding: 0;
+                transition: .3s;
 
                 li {
                     margin: 0 2rem;
@@ -481,9 +477,46 @@ p {
                         width: 100%;
                     }
                 }
+
             }
             .toggle {
                 display: block;
+            }
+        }
+        &.show {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4rem;
+            .container {
+                .navs {
+                    top: 4rem;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    #about {
+        text-align: center;
+    }
+
+    #competition {
+        text-align: center;
+
+        .btn-default {
+            margin: auto;
+        }
+
+    }
+
+    #talkshow {
+        .inner-bg {
+            .container {
+                p {
+                    width: 90%;
+                }
             }
         }
     }
@@ -497,6 +530,10 @@ p {
                 width: 100%;
                 font-size: 1em;
             }
+        }
+
+        &.show-navbar {
+            margin-top: 4rem;
         }
     }
 

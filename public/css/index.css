@@ -74,6 +74,7 @@ p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 100;
 }
 
 #navbar .container {
@@ -91,6 +92,7 @@ p {
 #navbar .container .logo {
   height: 4rem;
   padding: 0 1rem;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -109,6 +111,7 @@ p {
   color: white;
   padding: 0 .5rem;
   cursor: pointer;
+  z-index: 100;
   opacity: .8;
   -webkit-transition: .1s;
   transition: .1s;
@@ -215,14 +218,6 @@ p {
   margin-right: .5rem;
 }
 
-#about .container .events.row .col-md-6:nth-child(even) .event {
-  background-color: #4fbdba;
-}
-
-#about .container .events.row .col-md-6:nth-child(even) .event:nth-child(even) {
-  background-color: #35858b;
-}
-
 #about .container .events.row::after {
   content: '';
   background-image: url(../images/pattern.svg);
@@ -292,10 +287,6 @@ p {
   padding-top: 5rem;
   padding-bottom: 5rem;
   color: white;
-}
-
-#talkshow .inner-bg .container .container {
-  padding: 5rem 0;
 }
 
 #talkshow .inner-bg .container h2 {
@@ -484,15 +475,18 @@ p {
 
 @media (max-width: 800px) {
   #navbar .container .navs {
-    display: none;
     position: absolute;
+    display: block;
     text-align: center;
     left: 0;
-    top: 4rem;
+    top: -100vh;
+    opacity: 0;
     background-color: #0b343b;
     right: 0;
-    bottom: 0;
+    height: 100vh;
     padding: 0;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
   #navbar .container .navs li {
     margin: 0 2rem;
@@ -513,12 +507,38 @@ p {
   #navbar .container .toggle {
     display: block;
   }
+  #navbar.show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+  }
+  #navbar.show .container .navs {
+    top: 4rem;
+    opacity: 1;
+  }
+  #about {
+    text-align: center;
+  }
+  #competition {
+    text-align: center;
+  }
+  #competition .btn-default {
+    margin: auto;
+  }
+  #talkshow .inner-bg .container p {
+    width: 90%;
+  }
   #header .container h1 {
     font-size: 2em;
   }
   #header .container p {
     width: 100%;
     font-size: 1em;
+  }
+  #header.show-navbar {
+    margin-top: 4rem;
   }
   #footer .container .copy {
     display: block;

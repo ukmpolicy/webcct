@@ -40,3 +40,12 @@ function updateTotal() {
 function formatNumber(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+$('.toggle').click(() => {
+    $('#navbar').toggleClass('show')
+    $('#header').toggleClass('show-navbar')
+})
+$('#navbar .link').click(() => {
+    $('#navbar').toggleClass('show')
+    $('#header').toggleClass('show-navbar')
+})

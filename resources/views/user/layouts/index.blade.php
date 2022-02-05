@@ -91,7 +91,6 @@
                 <li><a href="https://ukmpolicy.org"><i class="fa fa-globe"></i></a></li>
                 <li><a href="https://www.youtube.com/channel/UCrRUKJF8F7TpbhWTUNP988Q"><i class="fab fa-youtube"></i></a></li>
                 <li><a href="https://www.instagram.com/policy.kbmpnl/"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://id-id.facebook.com/groups/900999129974881/"><i class="fab fa-facebook"></i></a></li>
             </ul>
         </div>
     </footer>

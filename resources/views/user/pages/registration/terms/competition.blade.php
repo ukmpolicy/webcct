@@ -7,7 +7,7 @@
     <li>Pada saat recheking peserta diwajibkan membawa bukti transfer dan mendaftar ulang pada pihak penyelenggara.</li>
     <li>Bila terdapat ketidaksesuaian, peserta yang bersangkutan akan di diskualifikasi dan dinyatakan gugur.</li>
     <li>Peserta wajib mengenakan pakaian rapi dan sopan serta memakai sepatu.</li>
-    <li>Peserta menggunakan kemeja(pria) mengenakan celana Panjang. Peserta (wanita) mengenakan celana bahan panjang atau rok panjang (tidak boleh diatas lutut) dan juga mengenakan jilbab dengan baju yang sopan.</li>
+    <li>Peserta menggunakan kemeja(pria) mengenakan celana Panjang. Peserta (wanita) mengenakan celana bahan panjang atau rok panjang (tidak boleh diatas lutut) dan baju yang sopan.</li>
     <li>Peserta yang berhalangan hadir tidak dapat digantikan peserta lain.</li>
     <li>Peserta diharapkan mengaktifkan mode senyap pada alat elektronik yang dibawa pada saat lomba </li>berlangsung.
     <li>Peserta tidak diperkenankan melakukan kecurangan dalam bentuk apapun.</li>
@@ -32,6 +32,7 @@
     <li>Hak Cipta atas karya yang ditetapkan sebagai pemenang menjadi sepenuhnya milik UKM-POLICY.</li>
     <li>Keputusan penetapan pemenang tidak dapat diganggu gugat.</li>
     <li>Peserta di anggap mengikuti lomba apabila sudah memenuhi segala administrasi.</li>
+    <li>Mendesain poster dengan tema "memasyarakatkan Linux"</li>
 </ol>
        
 <b>ALUR PERLOMBAAN DESIGN POSTER:</b>
@@ -66,11 +67,8 @@
     <li>Bel akan dibunyikan sebagai tanda waktu mulai dan waktu habis.</li>
 </ol>
 
-
-
-
 <b>PERSYARATAN DAN KETENTUAN LOMBA TYPING SPEED:</b>
-<ul type="dash">
+<ul>
     <li>Peserta merupakan siswa/i aktif SMA/SMK sederajat.</li>
     <li>Bagi siswa/i aktif dapat menunjukkan KTS(kartu tanda siswa)/ surat aktif siswa.</li>
     <li>Peserta adalah perorangan (individu).</li>

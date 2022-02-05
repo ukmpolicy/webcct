@@ -6,12 +6,12 @@
   <div class="container-fluid">
     <div class="row mb-2">
       <div class="col-sm-6">
-        <h1 class="m-0">Daftar Anggota</h1>
+        <h1 class="m-0">Daftar Peserta Kompetisi</h1>
       </div><!-- /.col -->
       <div class="col-sm-6">
         <ol class="breadcrumb float-sm-right">
-          <li class="breadcrumb-item">Data Organinsasi</li>
-          <li class="breadcrumb-item active">Daftar Anggota</li>
+          <li class="breadcrumb-item">Peserta</li>
+          <li class="breadcrumb-item active">Kompetisi</li>
           <li class="breadcrumb-item active"></li>
         </ol>
       </div><!-- /.col -->
@@ -90,6 +90,7 @@
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $registration->name }}</td>
+                  <td>{{ $registration->email }}</td>
                   <td>{{ $registration->email }}</td>
                   <td>{{ $registration->phone }}</td>
                   <td>

@@ -1,9 +1,8 @@
-@component('mail::message')
-# Hasil Pemerikasaan
+<h1>Hasil Pemerikasaan Berkas</h1>
 
-Hai {{ $attendee->name }}. Maaf, anda gagal melalui proses pemeriksaan.
-Data anda tidak sesuai dengan syarat dan ketentuan.
+<p>Hai {{ $attendee->name }}. Maaf berkas anda tidak diterima dikarenakan belum sesuai dengan syarat yang telah ditentukan. Untuk informasi lebih lanjut anda dapat mengunjungi sosial media kami atau dapat menghubungi kontak person berikut:</p>
+<p>- Ayatullah R. K. : 0822-7780-0517</p>
+<p>- Jihan Dwi Sarah : 0823-6070-2396</p>
 
-Terima kasih atas perhatiaannya,<br>
-{{ config('app.name') }}
-@endcomponent
+<p>Terima kasih atas perhatiaannya,</p>
+<p>UKM-POLICY</p>

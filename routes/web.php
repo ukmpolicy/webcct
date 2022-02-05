@@ -23,7 +23,7 @@ Route::prefix('manager')->group(function() {
 
     Route::get('/', function() {
         return view('admin.pages.dashboard.index');
-    })->name('dashboard');
+    })->name('dashboard')->middleware('auth');
 
     Route::prefix('registration')->middleware('auth')->group(function() {
         Route::get('/', [RegistrationController::class, 'index'])->name('registration');

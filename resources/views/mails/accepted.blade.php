@@ -1,11 +1,8 @@
-<h1>Hasil Pemerikasaan</h1>
+<h1>Hasil Pemerikasaan Berkas</h1>
 
-<p>Hai {{ $attendee->name }}. Selamat anda telah berhasil melalui proses pemeriksaan tahap pertama.
-    Token anda adalah {{ $registration->token }}. Jangan berikan token ini kepada siapapun!</p>
-
-<p>Code QR ini akan di scan oleh panitia saat pepemerikasaan ulang.</p>
-
-<img src="{!!$message->embedData($qr, 'QrCode.png', 'image/png')!!}">
+<p>Hai {{ $attendee->name }}. Selamat berkas anda telah diterima. Untuk informasi lebih lanjut anda dapat mengunjungi sosial media kami atau dapat menghubungi kontak person berikut:</p>
+<p>- Ayatullah R. K. : 0822-7780-0517</p>
+<p>- Jihan Dwi Sarah : 0823-6070-2396</p>
 
 <p>Terima kasih atas perhatiaannya,</p>
 <p>UKM-POLICY</p>

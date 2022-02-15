@@ -2,10 +2,13 @@
 
 use App\Http\Controllers\AttendeeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CompetitionRegistrationController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\SettingController;
+use App\Http\Controllers\TalkshowRegistrationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,18 +28,13 @@ Route::prefix('manager')->group(function() {
         return view('admin.pages.dashboard.index');
     })->name('dashboard')->middleware('auth');
 
-    Route::prefix('registration')->middleware('auth')->group(function() {
-        Route::get('/', [RegistrationController::class, 'index'])->name('registration');
-        Route::post('/change_status/{id}', [RegistrationController::class, 'changeStatus'])->name('registration.status');
+    Route::prefix('registration/competition')->middleware('auth')->group(function() {
+        Route::get('/', [CompetitionRegistrationController::class, 'index'])->name('competition');
+        Route::post('/change_status/{id}', [CompetitionRegistrationController::class, 'changeStatus'])->name('competition.status');
     });
-    
-    Route::prefix('event')->middleware('auth')->group(function() {
-        Route::get('/', [EventController::class, 'index'])->name('event');
-        Route::get('/create', [EventController::class, 'create'])->name('event.create');
-        Route::get('/{id}/edit', [EventController::class, 'edit'])->name('event.edit');
-        Route::post('/', [EventController::class, 'store'])->name('event.store');
-        Route::put('/{id}', [EventController::class, 'update'])->name('event.update');
-        Route::delete('/{id}', [EventController::class, 'destroy'])->name('event.destroy');
+
+    Route::prefix('registration/talkshow')->middleware('auth')->group(function() {
+        Route::get('/', [TalkshowRegistrationController::class, 'index'])->name('talkshow');
     });
 
     Route::prefix('auth')->group(function() {
@@ -78,14 +76,21 @@ Route::prefix('manager')->group(function() {
         ->name('mail.destroy');
     });
 
+    Route::prefix('setting')->middleware('auth')->group(function() {
+        Route::get('/', [SettingController::class, 'index'])
+        ->name('setting');
+        Route::post('/', [SettingController::class, 'save'])
+        ->name('setting.save');
+    });
 });
 
 Route::prefix('registration')->group(function() {
-    Route::get('/competition', [RegistrationController::class, 'formCompetitionEvent'])->name('registration.competition');
-    Route::get('/talkshow', [RegistrationController::class, 'formTalkshowEvent'])->name('registration.talkshow');
+
+    Route::get('/competition', [CompetitionRegistrationController::class, 'formRegistration'])->name('registration.competition');    
+    Route::post('/competition', [CompetitionRegistrationController::class, 'store'])->name('registration.competition.store');
     
-    Route::post('/competition', [RegistrationController::class, 'registerCompetitionEvent'])->name('registration.competition.store');
-    Route::post('/talkshow', [RegistrationController::class, 'registerTalkshowEvent'])->name('registration.talkshow.store');
+    Route::get('/talkshow', [TalkshowRegistrationController::class, 'formRegistration'])->name('registration.talkshow');     
+    Route::post('/talkshow', [TalkshowRegistrationController::class, 'store'])->name('registration.talkshow.store');
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

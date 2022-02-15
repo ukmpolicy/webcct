@@ -26,10 +26,19 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="{{ route('registration') }}" class="nav-link">
+                <a href="{{ route('competition') }}" class="nav-link">
                     <i class="nav-icon fas fa-users"></i>
                     <p>
-                        Peserta
+                        Peserta Kompetisi
+                    </p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('talkshow') }}" class="nav-link">
+                    <i class="nav-icon fas fa-users"></i>
+                    <p>
+                        Peserta Talkshow
                     </p>
                 </a>
             </li>
@@ -38,6 +47,15 @@
                 <a href="{{ route('mail') }}" class="nav-link">
                     <i class="nav-icon fas fa-envelope"></i>
                     <p>Masukan</p>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{ route('setting') }}" class="nav-link">
+                    <i class="nav-icon fas fa-cog"></i>
+                    <p>
+                        Pengaturan
+                    </p>
                 </a>
             </li>
 

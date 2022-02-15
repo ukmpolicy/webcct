@@ -21,12 +21,13 @@
 
 <b>PERSYARATAN DAN KETENTUAN LOMBA DESIGN POSTER:</b>
 <ol>
-    <li>Peserta merupakan siswa/i aktif SMA/SMK sederajat dan mahasiswa/i aktif.</li>
-    <li>Bagi siswa/i aktif dapat menunjukkan KTS(kartu tanda siswa)/ surat aktif siswa, dan Untuk mahasiswa/i </li>melampirkan bukti yang menunjukkan umur tidak melibihi 20 tahun.
+    <li>Peserta merupakan WNI(Warga Negara Indonesia).</li>
+    <li>Bagi siswa/i aktif dapat menunjukkan KTS(kartu tanda siswa)/ surat aktif siswa, untuk mahasiswa/i dan masyarakat umum dapat melampirkan bukti yang menunjukkan umur tidak melibihi 20 tahun.</li>
     <li>Peserta adalah perorangan (individu).</li>
     <li>Peserta lomba hanya diperbolehkan membuat 1 karya saja.</li>
-    <li>Karya asli peserta, bukan meniru/menjiplak desain yang sudah ada</li>
-    <li>Panitia tidak bertanggung jawab apabila ada klaim dari pihak lain atas ke-tidak orisinilan karya atau </li>plagiarisme.
+    <li>Karya asli peserta, bukan meniru/menjiplak desain yang sudah ada.</li>
+    <li>Peserta boleh membawa flashdisk untuk menyimpan bahan desain(mentahan), dikarena peserta tidak boleh mengakses internet dihari lomba.</li>
+    <li>Panitia tidak bertanggung jawab apabila ada klaim dari pihak lain atas ke-tidak orisinilan karya atau plagiarisme.</li>
     <li>Tidak mengandung unsur pornografi dan isu SARA</li>
     <li>Desain poster belum pernah dipublikasikan sebelumnya.</li>
     <li>Hak Cipta atas karya yang ditetapkan sebagai pemenang menjadi sepenuhnya milik UKM-POLICY.</li>
@@ -69,8 +70,8 @@
 
 <b>PERSYARATAN DAN KETENTUAN LOMBA TYPING SPEED:</b>
 <ul>
-    <li>Peserta merupakan siswa/i aktif SMA/SMK sederajat.</li>
-    <li>Bagi siswa/i aktif dapat menunjukkan KTS(kartu tanda siswa)/ surat aktif siswa.</li>
+    <li>Peserta merupakan WNI(Warga Negara Indonesia).</li>
+    <li>Bagi siswa/i aktif dapat menunjukkan KTS(kartu tanda siswa)/ surat aktif siswa, untuk mahasiswa/i dan masyarakat umum dapat melampirkan bukti yang menunjukkan umur tidak melibihi 21 tahun.</li>
     <li>Peserta adalah perorangan (individu).</li>
     <li>Panitia menyiapkan keyboard eksternal untuk setiap peserta</li>
     <li>Software akan disiapkan oleh panitia maka peserta dilarang memakai software sendiri</li>

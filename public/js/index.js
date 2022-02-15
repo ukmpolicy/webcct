@@ -50,6 +50,12 @@ $('#navbar .link').click(() => {
     $('#header').toggleClass('show-navbar')
 })
 
+if ($('#term')) {
+    if ($('#term')[0].checked) {
+        $('.form').removeClass('accept');
+        $('.form').addClass('accept');
+    }
+}
 $('#term').click(() => {
     $('.form').toggleClass('accept');
 })

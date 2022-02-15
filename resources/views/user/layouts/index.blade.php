@@ -38,7 +38,7 @@
     <link rel="stylesheet" href="{{ asset('plugins/OwlCarousel/css/owl.carousel.min.css') }}">
 
     <!-- Local Css -->
-    <link rel="shortcut icon" href="{{ asset('images/logo_w.svg') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/logo.ico') }}" type="image/x-icon">
 
     <!-- Local Css -->
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">

@@ -9,16 +9,17 @@
                 <div class="terms col-md-6">
                     <h2>Syarat Dan Ketentuan</h2>
                     <div class="content">
-                        @include('user.pages.registration.terms.competition')
+                        <!-- @include('user.pages.registration.terms.competition') -->
+                        {!! $terms !!}
                     </div>
                     <div class="form-group d-flex py-3" style="gap: .5rem; align-items: center;">
-                        <input type="checkbox" id="term"> <label for="term">Menyetujui syarat dan ketentuan.</label>
+                        <input type="checkbox" id="term" name="term" @if (old('terms') == 'on') checked @endif> <label for="term">Menyetujui syarat dan ketentuan.</label>
                     </div>
                 </div>
                 <hr class="d-md-none">
                 <div class="form col-md-6">
                     <h2>Daftar Sekarang</h2>
-                    <form action="{{ route('registration.competition.store') }}" enctype="multipart/form-data" method="post">
+                    <form action="{{ route('registration.talkshow.store') }}" enctype="multipart/form-data" method="post">
                         @csrf
                         <div class="form-group mt-3">
                             <label for="">Nama Lengkap:</label>
@@ -86,12 +87,12 @@
                         <div class="events" id="form_choice_competition">
                             Perlombaan:
                             <div class="row">
-                                @foreach ($events as $e)
+                                @foreach ($events as $i => $e)
                                 <div class="col-4">
-                                    <input type="checkbox" name="events[]" value="{{ $e->id }}" id="e{{ $e->id }}" class="d-none">
-                                    <div class="event" onclick="choiceCompetition(this,'#e{{ $e->id }}')" data-price="{{ $e->price }}">
-                                        <div class="name text-capitalize">{{ $e->name }}</div>
-                                        <div class="price">Rp {{ number_format($e->price) }}</div>
+                                    <input type="checkbox" name="events[]" value="{{ $i }}" id="e{{ $i }}" class="d-none">
+                                    <div class="event" onclick="choiceCompetition(this,'#e{{ $i }}')" data-price="{{ $e['price'] }}">
+                                        <div class="name text-capitalize">{{ $e['name'] }}</div>
+                                        <div class="price">Rp {{ number_format($e['price']) }}</div>
                                     </div>
                                 </div>
                                 @endforeach

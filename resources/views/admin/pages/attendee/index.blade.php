@@ -79,30 +79,29 @@
                 @foreach ($registrations->forPage($page, $perPage) as $registration)
 
                 @php
-                    $es = DB::table('event_registrations')->where('event_registrations.registration_id', $registration->id)->select('events.name')->join('events', 'events.id', '=', 'event_registrations.event_id')->get();
                     $events = '';
-                    foreach ($es as $event) {
-                      $events .= $event->name.', ';
+                    foreach (json_decode($registration->competitions) as $i) {
+                      $events .= $competitions[$i]['name'].', ';
                     }
                     $events = substr($events, 0, -2);
+                    $attachments = DB::table('cr_attachments')->where('cr_id', $registration->id)->get();
                 @endphp
                   
                 <tr>
                   <td>{{ $loop->iteration }}</td>
                   <td>{{ $registration->name }}</td>
                   <td>{{ $registration->email }}</td>
-                  <td>{{ $registration->email }}</td>
                   <td>{{ $registration->phone }}</td>
                   <td>
                     <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#detail{{ $registration->id }}"><i class="fa fa-eye"></i></button>
                   </td>
                   <td>
-                    <form action="{{ route('registration.status', ['id' => $registration->id]) }}" method="post" id="status{{ $registration->id }}">
+                    <form action="{{ route('competition.status', ['id' => $registration->id]) }}" method="post" id="status{{ $registration->id }}">
                       @csrf
                       <select class="custom-select w-100" name="status" onchange="document.querySelector('#status{{ $registration->id }}').submit()" style="width: fit-content">
     
                         @foreach ($status as $k => $v)
-                        <option value="{{ $k }}" @if ($registration->status === $k) selected @endif>{{ $v }}</option>
+                        <option value="{{ $k }}" @if ($registration->status == $k) selected @endif>{{ $v }}</option>
                         @endforeach
     
                       </select>
@@ -144,20 +143,11 @@
                                 <td>Status</td> <td>: {{ $status[$registration->status] }}</td>
                               </tr>
                             </table>
-                            @if ($registration->identity)
-                            <div class="mt-2">Identitas</div>
-                            <img class="w-100" src="{{ asset('uploads/identity/'.$registration->identity) }}" alt="{{ $registration->name }}">
-                            @endif
 
-                            @if ($registration->bs_filename)
-                            <div class="mt-2">Bukti Berbagi</div>
-                            <img class="w-100" src="{{ asset('uploads/bs/'.$registration->bs_filename) }}" alt="{{ $registration->name }}">
-                            @endif
-
-                            @if ($registration->bp_filename)
-                            <div class="mt-2">Bukti Pembayaran</div>
-                            <img class="w-100" src="{{ asset('uploads/bp/'.$registration->bp_filename) }}" alt="{{ $registration->name }}">
-                            @endif
+                            @foreach ($attachments as $att)
+                              <div class="mt-2">{{ $loop->iteration == 1 ? 'Identitas' : 'Bukti Pembayaran' }}</div>
+                              <img class="w-100" src="{{ asset('uploads/attachments/'.$att->filename) }}" alt="{{ $att->key }}">
+                            @endforeach
                           </div>
                         </div>
                       </div>

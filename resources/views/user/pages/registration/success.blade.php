@@ -4,7 +4,8 @@
 
     <!-- Form Registration -->
     <div id="registration">
-        <div class="contained-d">
+
+        <div class="contained">
             <div class="row">
                 <div class="col-md-5 m-auto bg-white p-5">
                     <div class="alert alert-success">

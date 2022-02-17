@@ -15,17 +15,10 @@
             </div>
         </div>
         @endif
-        
+
         @if (!$expired)
         <div class="container container-d">
             <div class="row">
-
-                <div class="col-md-5 m-auto bg-white p-5">
-                    <div class="alert alert-success">
-                        Maaf untuk saat ini pendaftaran di tutup.
-                    </div>
-                </div>
-
                 <div class="terms col-md-6">
                     <h2>Syarat Dan Ketentuan</h2>
                     <div class="content">

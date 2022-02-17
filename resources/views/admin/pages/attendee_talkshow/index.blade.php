@@ -94,6 +94,38 @@
                 </tr>
 
                 
+                <div class="modal fade" id="detail{{ $registration->id }}">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title">Detail Data</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <table class="w-100">
+                          <tr>
+                            <td>Nama</td> <td>: {{ $registration->name }}</td>
+                          </tr>
+                          <tr>
+                            <td>Email</td> <td>: {{ $registration->email }}</td>
+                          </tr>
+                          <tr>
+                            <td>Nomor Whatsapp</td> <td>: {{ $registration->phone }}</td>
+                          </tr>
+                        </table>
+
+                        @foreach ($attachments as $att)
+                          <div class="mt-2">{{ $loop->iteration == 1 ? 'Identitas' : 'Bukti Pembayaran' }}</div>
+                          <img class="w-100" src="{{ asset('uploads/attachments/'.$att->filename) }}" alt="{{ $att->key }}">
+                        @endforeach
+                      </div>
+                    </div>
+                  </div>
+    
+                </div>
+                
                 
                 @endforeach
 

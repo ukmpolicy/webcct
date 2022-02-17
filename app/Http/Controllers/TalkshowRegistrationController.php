@@ -72,7 +72,6 @@ class TalkshowRegistrationController extends Controller
         if ($closingTime) $expired = (time() > strtotime($closingTime->value));
 
         $statusReg = Setting::where('key', 'talkshow_status_registration')->first();
-        // dd($statusReg->value);
         if ($statusReg) $expired = ($statusReg->value == 0);
 
         $data["expired"] = $expired;

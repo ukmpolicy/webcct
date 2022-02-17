@@ -238,6 +238,11 @@
                         <img src="{{ asset('images/sponsors/alkaysan.png') }}" alt="">
                     </div>
                 </div>
+                <div class="item">
+                    <div class="logo">
+                        <img src="{{ asset('images/sponsors/auliya_computer.png') }}" alt="">
+                    </div>
+                </div>
             </div>
 
         </div>

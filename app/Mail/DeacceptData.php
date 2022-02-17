@@ -30,7 +30,7 @@ class DeacceptData extends Mailable
      */
     public function build()
     {
-        return $this->subject('Hasil Pengecekan Berkas')
+        return $this->subject('Berkas Tidak Diterima')
                     ->markdown('mails.deaccepted', $this->data);
     }
 }

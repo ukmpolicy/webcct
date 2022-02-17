@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Mail\AcceptData;
 use App\Mail\DeacceptData;
 use App\Mail\RecheckingData;
+use App\Mail\TalkshowAccept;
 use App\Models\Attendee;
 use App\Models\CompetitionRegistration;
 use App\Models\CRAttachment;
@@ -115,7 +116,7 @@ class TalkshowRegistrationController extends Controller
         $this->attachment($request, $registration->id, "bs");
         $this->attachment($request, $registration->id, "bp");
 
-        Mail::to($registration->email)->send(new AcceptData(["registration" => $registration]));
+        Mail::to($registration->email)->send(new TalkshowAccept(["registration" => $registration]));
 
         return view('user.pages.registration.success', ["attendee" => $registration]);
     }

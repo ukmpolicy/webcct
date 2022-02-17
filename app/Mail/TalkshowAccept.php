@@ -30,7 +30,7 @@ class TalkshowAccept extends Mailable
      */
     public function build()
     {
-        return $this->subject('Hasil Pengecekan Berkas')
-                    ->view('mails.accepted', $this->data);
+        return $this->subject('Ticket Cyber Competition And Talkshow')
+                    ->markdown('mails.resregtalkshow', $this->data);
     }
 }

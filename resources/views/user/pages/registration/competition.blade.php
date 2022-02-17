@@ -25,15 +25,16 @@
                         <!-- @include('user.pages.registration.terms.competition') -->
                         {!! $terms !!}
                     </div>
+                    {{-- {{ old('terms') }} --}}
+                    <form action="{{ route('registration.competition.store') }}" enctype="multipart/form-data" method="post">
+                        @csrf
                     <div class="form-group d-flex py-3" style="gap: .5rem; align-items: center;">
-                        <input type="checkbox" id="term" name="term" @if (old('terms') == 'on') checked @endif> <label for="term">Menyetujui syarat dan ketentuan.</label>
+                        <input type="checkbox" id="term" name="terms" @if (old('terms') == 'on') checked @endif> <label for="term">Menyetujui syarat dan ketentuan.</label>
                     </div>
                 </div>
                 <hr class="d-md-none">
                 <div class="form col-md-6">
                     <h2>Daftar Sekarang</h2>
-                    <form action="{{ route('registration.talkshow.store') }}" enctype="multipart/form-data" method="post">
-                        @csrf
                         <div class="form-group mt-3">
                             <label for="">Nama Lengkap:</label>
                             <input type="text" name="name" value="{{ old('name') }}" class="form-control">

@@ -165,9 +165,7 @@
                 
                 <!-- Promot Talkshow -->
                 <div class="">
-                    <p class="text-capitalize">Mari mengenal dan belajar terkait Linux dan Bahayanya Ransomware bersama para pakar dan ahli di bidangnya.</p>
-                    
-                    {{-- <p class="text-capitalize">Mari mengenal dan belajar terkait Linux dan Bahayanya Ransomware bersama bapak Ghaly Bayhaqi RM seorang Aktivis Linux Activis & Cyber Security Research dan juga bapak xxxxxxxxx seorang para pakar di bidang xxxxxxxxxx.</p> --}}
+                    <p class="text-capitalize">Mari mengenal dan belajar lebih jauh dengan linux dan pemanfaatannya dalam dunia industri teknologi, bersama Bapak Utian Ayuba (Mantan Pengembangan Blackon OS dan Pendiri PT. Boer Technology) dan Bapak Zaki Akhyar (System Administator) yang berperan sebagai moderator.</p>
                     <a href="{{ route('registration.talkshow') }}" class="btn-default" >DAFTAR SEKARANG</a>
                 </div>
 

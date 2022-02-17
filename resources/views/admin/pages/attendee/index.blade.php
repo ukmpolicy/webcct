@@ -128,9 +128,6 @@
                                 <td>Nomor Whatsapp</td> <td>: {{ $registration->phone }}</td>
                               </tr>
                               <tr>
-                                <td>Nomor Whatsapp</td> <td>: {{ $registration->phone }}</td>
-                              </tr>
-                              <tr>
                                 <td>Alamat</td> <td>: {{ $registration->address.', '.$registration->city.', '.$registration->region }}</td>
                               </tr>
                               <tr>
@@ -158,8 +155,6 @@
                     </div>
                   </td>
                 </tr>
-
-                
                 
                 @endforeach
 

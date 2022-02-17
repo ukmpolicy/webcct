@@ -115,7 +115,7 @@
                                 <td>Alamat</td> <td>: {{ $data['address'].', '.$data['city'].', '.$data['region'] }}</td>
                               </tr>
                               <tr>
-                                <td>Tanggal Lahir</td> <td>: {{ date('d-m-Y', strtotime($registration->birthdate)) }} ({{ (int)date("Y", time() - strtotime($registration->birthdate)) - 1970 }}) </td>
+                                <td>Tanggal Lahir</td> <td>: {{ date('d-m-Y', strtotime($data['birthdate'])) }} ({{ (int)date("Y", time() - strtotime($data['birthdate'])) - 1970 }}) </td>
                               </tr>
                               <tr>
                                 <td>Institusi</td> <td>: {{ $data['institution'] }} </td>

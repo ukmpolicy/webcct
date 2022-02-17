@@ -24,7 +24,7 @@ class TalkshowRegistrationController extends Controller
     
     private $status = ['offline', 'online'];
     private $data = [
-        "birthdate", "region", "city", "address", "intitution", "profession"
+        "birthdate", "region", "city", "address", "institution", "profession"
     ];
 
     public function index(Request $request) {

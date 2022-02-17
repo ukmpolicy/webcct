@@ -80,6 +80,7 @@
                 @php
                     $attachments = DB::table('tr_attachments')->where('tr_id', $registration->id)->get();
                     $data = json_decode($registration->data, true);
+                    // dd($data);
                 @endphp
                   
                 <tr>
@@ -90,41 +91,53 @@
                   <td>{{ $status[$registration->status] }}</td>
                   <td>
                     <button class="btn w-100 btn-primary" data-toggle="modal" data-target="#detail{{ $registration->id }}"><i class="fa fa-eye"></i></button>
+                    <div class="modal fade" id="detail{{ $registration->id }}">
+                      <div class="modal-dialog">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h4 class="modal-title">Detail Data</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <table class="w-100">
+                              <tr>
+                                <td>Nama</td> <td>: {{ $registration->name }}</td>
+                              </tr>
+                              <tr>
+                                <td>Email</td> <td>: {{ $registration->email }}</td>
+                              </tr>
+                              <tr>
+                                <td>Nomor Whatsapp</td> <td>: {{ $registration->phone }}</td>
+                              </tr>
+                              <tr>
+                                <td>Alamat</td> <td>: {{ $data['address'].', '.$data['city'].', '.$data['region'] }}</td>
+                              </tr>
+                              <tr>
+                                <td>Tanggal Lahir</td> <td>: {{ date('d-m-Y', strtotime($registration->birthdate)) }} ({{ (int)date("Y", time() - strtotime($registration->birthdate)) - 1970 }}) </td>
+                              </tr>
+                              <tr>
+                                <td>Institusi</td> <td>: {{ $data['institution'] }} </td>
+                              </tr>
+                              <tr>
+                                <td>Profesi</td> <td>: {{ $data['profession'] }} </td>
+                              </tr>
+                            </table>
+    
+                            @foreach ($attachments as $att)
+                              <div class="mt-2">{{ $loop->iteration == 1 ? 'Bukti Share' : 'Bukti Pembayaran' }}</div>
+                              <img class="w-100" src="{{ asset('uploads/attachments/'.$att->filename) }}" alt="{{ $att->key }}">
+                            @endforeach
+                          </div>
+                        </div>
+                      </div>
+        
+                    </div>
                   </td>
                 </tr>
 
                 
-                <div class="modal fade" id="detail{{ $registration->id }}">
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Detail Data</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <table class="w-100">
-                          <tr>
-                            <td>Nama</td> <td>: {{ $registration->name }}</td>
-                          </tr>
-                          <tr>
-                            <td>Email</td> <td>: {{ $registration->email }}</td>
-                          </tr>
-                          <tr>
-                            <td>Nomor Whatsapp</td> <td>: {{ $registration->phone }}</td>
-                          </tr>
-                        </table>
-
-                        @foreach ($attachments as $att)
-                          <div class="mt-2">{{ $loop->iteration == 1 ? 'Identitas' : 'Bukti Pembayaran' }}</div>
-                          <img class="w-100" src="{{ asset('uploads/attachments/'.$att->filename) }}" alt="{{ $att->key }}">
-                        @endforeach
-                      </div>
-                    </div>
-                  </div>
-    
-                </div>
                 
                 
                 @endforeach

@@ -11,10 +11,12 @@ class SettingController extends Controller
     private $default = [
         "competition_opening_registration",
         "competition_closing_registration",
+        "competition_status_registration",
         "terms_competition",
         "terms_talkshow",
         "talkshow_opening_registration",
         "talkshow_closing_registration",
+        "talkshow_status_registration",
     ];
 
     public function index() {
@@ -40,9 +42,8 @@ class SettingController extends Controller
 
     public function save(Request $request) {
         $data = $request->only($this->default);
-        // dd($data);
         foreach ($data as $k => $v) {
-            if ($v) {
+            if (trim($v) != '' && !is_null($v)) {
                 $s = Setting::where('key', $k)->first();
                 if (!$s) {
                     $s = new Setting();
@@ -52,6 +53,7 @@ class SettingController extends Controller
                 $s->save();
             }
         }
+        // dd(Setting::all()->toArray());
         return redirect()->route('setting')->with('success', 'Perubahan berhasil disimpan');
     }
 }

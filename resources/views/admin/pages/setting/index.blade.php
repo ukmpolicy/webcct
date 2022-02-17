@@ -45,6 +45,13 @@
 
             <h5># Kompetisi</h5>
             <div class="mb-3">
+              <label for="">Status Pendaftaran:</label>
+              <select name="competition_status_registration" class="form-control">
+                <option value="0" @if ($settings['competition_status_registration'] == 0) selected @endif>Tutup</option>
+                <option value="1" @if ($settings['competition_status_registration'] == 1) selected @endif>Buka</option>
+              </select>
+            </div>
+            <div class="mb-3">
               <label for="terms_competition">Jadwal Buka Pendaftaran:</label>
                 <input type="datetime-local" value="{{ $settings['competition_opening_registration'] }}" name="competition_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
@@ -60,7 +67,14 @@
             
             <h5 class="mt-5"># Talkshow</h5>
             <div class="mb-3">
-              <label for="terms_talkshow">Jadwal Buka Pendaftaran:</label>
+              <label for="terms_talkshow">Status Pendaftaran:</label>
+              <select name="talkshow_status_registration" class="form-control">
+                <option value="0" @if ($settings['talkshow_status_registration'] == 0) selected @endif>Tutup</option>
+                <option value="1" @if ($settings['talkshow_status_registration'] == 1) selected @endif>Buka</option>
+              </select>
+            </div>
+            <div class="mb-3">
+                <label for="terms_talkshow">Jadwal Buka Pendaftaran:</label>
                 <input type="datetime-local" value="{{ $settings['talkshow_opening_registration'] }}" name="talkshow_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">

@@ -66,9 +66,15 @@ class TalkshowRegistrationController extends Controller
         $terms = Setting::where('key', 'terms_talkshow')->first();
         $data["terms"] = ($terms) ? $terms->value : '';
         
-        $closingTime = Setting::where('key', 'talkshow_closing_registration')->first();
         $expired = false;
+
+        $closingTime = Setting::where('key', 'talkshow_closing_registration')->first();
         if ($closingTime) $expired = (time() > strtotime($closingTime->value));
+
+        $statusReg = Setting::where('key', 'talkshow_status_registration')->first();
+        // dd($statusReg->value);
+        if ($statusReg) $expired = ($statusReg->value == 0);
+
         $data["expired"] = $expired;
 
         return view("user.pages.registration.talkshow", $data);

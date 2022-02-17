@@ -61,9 +61,14 @@ class CompetitionRegistrationController extends Controller
         $terms = Setting::where('key', 'terms_competition')->first();
         $data["terms"] = ($terms) ? $terms->value : '';
 
-        $closingTime = Setting::where('key', 'competition_closing_registration')->first();
         $expired = false;
+
+        $closingTime = Setting::where('key', 'competition_closing_registration')->first();
         if ($closingTime) $expired = (time() > strtotime($closingTime->value));
+
+        $statusReg = Setting::where('key', 'competition_status_registration')->first();
+        if ($statusReg) $expired = ($statusReg->value == 0);
+
         $data["expired"] = $expired;
 
         return view("user.pages.registration.competition", $data);

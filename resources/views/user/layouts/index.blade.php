@@ -50,7 +50,7 @@
         <div class="container">
             
             <!-- Logo -->
-            <a href="" class="logo">
+            <a href="{{ route('home') }}" class="logo">
                 <img src="{{ asset('images/logo_w.svg') }}" alt="CCT LOGO">
             </a>
 

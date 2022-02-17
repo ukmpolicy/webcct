@@ -65,6 +65,12 @@ class TalkshowRegistrationController extends Controller
     public function formRegistration() {
         $terms = Setting::where('key', 'terms_talkshow')->first();
         $data["terms"] = ($terms) ? $terms->value : '';
+        
+        $closingTime = Setting::where('key', 'talkshow_closing_registration')->first();
+        $expired = false;
+        if ($closingTime) $expired = (time() > strtotime($closingTime->value));
+        $data["expired"] = $expired;
+
         return view("user.pages.registration.talkshow", $data);
     }
 
@@ -103,6 +109,8 @@ class TalkshowRegistrationController extends Controller
 
         $this->attachment($request, $registration->id, "bs");
         $this->attachment($request, $registration->id, "bp");
+
+        Mail::to($registration->email)->send(new AcceptData(["registration" => $registration]));
 
         return view('user.pages.registration.success', ["attendee" => $registration]);
     }

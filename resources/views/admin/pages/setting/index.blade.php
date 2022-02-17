@@ -50,7 +50,7 @@
             </div>
             <div class="mb-3">
                 <label for="terms_competition">Jadwal Tutup Pendaftaran:</label>
-                <input type="datetime-local" value="{{ $settings['competition_opening_registration'] }}" name="competition_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
+                <input type="datetime-local" value="{{ $settings['competition_closing_registration'] }}" name="competition_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
                 <label for="terms_competition">Syarat / Ketentuan:</label>
@@ -65,7 +65,7 @@
             </div>
             <div class="mb-3">
                 <label for="terms_talkshow">Jadwal Tutup Pendaftaran:</label>
-                <input type="datetime-local" value="{{ $settings['talkshow_opening_registration'] }}" name="talkshow_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
+                <input type="datetime-local" value="{{ $settings['talkshow_closing_registration'] }}" name="talkshow_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
                 <label for="terms_talkshow">Syarat / Ketentuan:</label>

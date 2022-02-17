@@ -12,6 +12,19 @@
 
     <!-- Form Registration -->
     <div id="registration">
+        @if ($expired)
+        <div class="contained">
+            <div class="row">
+                <div class="col-md-5 m-auto bg-white p-5">
+                    <div class="alert alert-danger">
+                        Maaf untuk saat ini pendaftaran di tutup.
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
+
+        @if (!$expired)
         <div class="container container-d">
             <div class="row">
                 <div class="talkshow terms col-md-6">
@@ -123,6 +136,7 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
 
 @endsection

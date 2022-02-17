@@ -168,7 +168,7 @@
                     <p class="text-capitalize">Mari mengenal dan belajar terkait Linux dan Bahayanya Ransomware bersama para pakar dan ahli di bidangnya.</p>
                     
                     {{-- <p class="text-capitalize">Mari mengenal dan belajar terkait Linux dan Bahayanya Ransomware bersama bapak Ghaly Bayhaqi RM seorang Aktivis Linux Activis & Cyber Security Research dan juga bapak xxxxxxxxx seorang para pakar di bidang xxxxxxxxxx.</p> --}}
-                    <a href="#" class="btn-default" onclick="event.preventDefault()">S E G E R A</a>
+                    <a href="{{ route('registration.talkshow') }}" class="btn-default" >DAFTAR SEKARANG</a>
                 </div>
 
             </div>

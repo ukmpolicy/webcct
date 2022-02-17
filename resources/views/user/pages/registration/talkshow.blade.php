@@ -108,6 +108,13 @@
                                 <div class="small text-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="mt-3">
+                            <label for="bp" class="form-label">Bukti Pembayaran:</label>
+                            <input class="form-control" name="bp" type="file" id="bp">
+                            @error('bp')
+                                <div class="small text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                         <div class="small mt-3 text-black-50"><sub>*</sub> Note: Kuota pendaftaran sebagai peserta offline bersifat terbatas.</div>
                         <div class="form-group mt-3">
                             <button class="btn w-100 btn-default">DAFTAR</button>

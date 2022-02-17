@@ -17,6 +17,7 @@ use App\Models\TRAttachment;
 use Illuminate\Http\Request;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Validation\Rule;
 
 class TalkshowRegistrationController extends Controller
 {
@@ -83,6 +84,9 @@ class TalkshowRegistrationController extends Controller
 
             // Attachments
             "bs" => "required|image",
+            "bp" => ["image", Rule::requiredIf(function() use ($request) {
+                return (int) $request->status == 0;
+            })],
         ]);
 
         $data = $request->only($this->data);
@@ -98,6 +102,7 @@ class TalkshowRegistrationController extends Controller
         $registration->save();
 
         $this->attachment($request, $registration->id, "bs");
+        $this->attachment($request, $registration->id, "bp");
 
         return view('user.pages.registration.success', ["attendee" => $registration]);
     }

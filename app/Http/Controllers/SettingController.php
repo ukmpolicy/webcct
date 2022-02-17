@@ -40,6 +40,7 @@ class SettingController extends Controller
 
     public function save(Request $request) {
         $data = $request->only($this->default);
+        // dd($data);
         foreach ($data as $k => $v) {
             if ($v) {
                 $s = Setting::where('key', $k)->first();

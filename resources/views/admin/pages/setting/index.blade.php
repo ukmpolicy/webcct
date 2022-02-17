@@ -46,11 +46,11 @@
             <h5># Kompetisi</h5>
             <div class="mb-3">
               <label for="terms_competition">Jadwal Buka Pendaftaran:</label>
-                <input type="datetime-local" name="competition_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
+                <input type="datetime-local" value="{{ $settings['competition_opening_registration'] }}" name="competition_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
                 <label for="terms_competition">Jadwal Tutup Pendaftaran:</label>
-                <input type="datetime-local" name="competition_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
+                <input type="datetime-local" value="{{ $settings['competition_opening_registration'] }}" name="competition_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
                 <label for="terms_competition">Syarat / Ketentuan:</label>
@@ -60,12 +60,12 @@
             
             <h5 class="mt-5"># Talkshow</h5>
             <div class="mb-3">
-              <label for="terms_competition">Jadwal Buka Pendaftaran:</label>
-                <input type="datetime-local" name="talkshow_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
+              <label for="terms_talkshow">Jadwal Buka Pendaftaran:</label>
+                <input type="datetime-local" value="{{ $settings['talkshow_opening_registration'] }}" name="talkshow_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
-                <label for="terms_competition">Jadwal Tutup Pendaftaran:</label>
-                <input type="datetime-local" name="talkshow_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
+                <label for="terms_talkshow">Jadwal Tutup Pendaftaran:</label>
+                <input type="datetime-local" value="{{ $settings['talkshow_opening_registration'] }}" name="talkshow_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
                 <label for="terms_talkshow">Syarat / Ketentuan:</label>

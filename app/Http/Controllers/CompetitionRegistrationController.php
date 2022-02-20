@@ -25,15 +25,15 @@ class CompetitionRegistrationController extends Controller
     public static $events = [
         [
             "name" => "Typing Speed",
-            "price" => 30000
+            "price" => 25000
         ],
         [
             "name" => "Design Poster",
-            "price" => 40000
+            "price" => 25000
         ],
         [
             "name" => "Linux Server",
-            "price" => 40000
+            "price" => 25000
         ],
     ];
 

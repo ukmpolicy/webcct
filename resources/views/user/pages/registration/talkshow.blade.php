@@ -106,9 +106,9 @@
                         </div>
                         <div class="form-group mt-3">
                             <label for="">Daftar Sebagai Peserta:</label>
-                            <select name="status" class="form-control">
-                                <option value="1" selected>Online</option>
+                            <select name="status" id="status" class="form-control">
                                 <option value="0">Offline</option>
+                                <option value="1" selected>Online</option>
                             </select>
                             @error('status')
                                 <div class="small text-danger">{{ $message }}</div>
@@ -121,7 +121,7 @@
                                 <div class="small text-danger">{{ $message }}</div>
                             @enderror
                         </div>
-                        <div class="mt-3">
+                        <div class="mt-3" id="form_bp" style="display: none">
                             <label for="bp" class="form-label">Bukti Pembayaran:</label>
                             <input class="form-control" name="bp" type="file" id="bp">
                             @error('bp')
@@ -140,3 +140,17 @@
     </div>
 
 @endsection
+
+    <script>
+        setInterval(() => {
+            let status = document.querySelector('#status');
+            let bp = document.querySelector('#form_bp');
+            status.onchange = (e) => {
+                if (e.target.value == 0) {
+                    bs.style.display = 'block';
+                }else {
+                    bs.style.display = 'none';
+                }
+            }
+        }, 100);
+    </script>

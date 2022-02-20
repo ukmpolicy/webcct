@@ -45,6 +45,7 @@ $('.toggle').click(() => {
     $('#navbar').toggleClass('show')
     $('#header').toggleClass('show-navbar')
 })
+
 $('#navbar .link').click(() => {
     $('#navbar').toggleClass('show')
     $('#header').toggleClass('show-navbar')

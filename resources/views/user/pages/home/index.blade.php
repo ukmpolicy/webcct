@@ -98,6 +98,7 @@
                     <!-- About -->
                     <div class="col-md-4 pt-1 pb-3">
                         <p>Saatnya anda menunjukan kompetensi yang anda miliki melalui ajang perlombaan yang sangat luar biasa. Dirancang oleh para ahli pada bidangnya dengan harga pendaftaran yang terjangkau. Anda juga dapat mengikuti acara Talkshow secara langsung.</p>
+                        <h4 class="mb-3">Rp 25.000</h4>
                         <a href="{{ route('registration.competition') }}" class="btn-default">DAFTARKAN SEKARANG</a>
                     </div>
     
@@ -112,8 +113,7 @@
                                         <img src="{{ asset('images/server.png') }}" alt="trophy">
                                     </div>
                                     <h5>Linux Server</h5>
-                                    <div class="price">Rp 40.000</div>
-                                    <p>Membangun suatu server berdasarkan modul yang diberikan</p>
+                                    <p class="mt-2">Membangun suatu server berdasarkan modul yang diberikan</p>
                                 </div>
                             </div>
     
@@ -124,8 +124,7 @@
                                         <img src="{{ asset('images/design.png') }}" alt="trophy">
                                     </div>
                                     <h5>Design Poster</h5>
-                                    <div class="price">Rp 40.000</div>
-                                    <p>Merancang dan mendesain suatu poster yang kreatif berdasarkan tema yang telah di tentukan</p>
+                                    <p class="mt-2">Merancang dan mendesain suatu poster yang kreatif berdasarkan tema yang telah di tentukan</p>
                                 </div>
                             </div>
     
@@ -136,8 +135,7 @@
                                         <img src="{{ asset('images/typing.png') }}" alt="trophy">
                                     </div>
                                     <h5>Typing Speed</h5>
-                                    <div class="price">Rp 30.000</div>
-                                    <p>Menguji kecepatan mengetik menggunakan aplikasi dan kata - kata yang ditentukan</p>
+                                    <p class="mt-2">Menguji kecepatan mengetik menggunakan aplikasi dan kata - kata yang ditentukan</p>
                                 </div>
                             </div>
     
@@ -163,9 +161,9 @@
                     <h2>Talkshow</h2>
                 </div>
                 
-                <!-- Promot Talkshow -->
+                <!-- Promot Talkshow -->        
                 <div class="">
-                    <p class="text-capitalize">Mari mengenal dan belajar lebih jauh dengan linux dan pemanfaatannya dalam dunia industri teknologi, bersama Bapak Utian Ayuba (Mantan Pengembangan Blackon OS dan Pendiri PT. Boer Technology) dan Bapak Zaki Akhyar (System Administator) yang berperan sebagai moderator.</p>
+                    <p class="text-capitalize">Mari mengenal dan belajar lebih jauh dengan Cloud Computing dan pemanfaatannya dalam membangun Startup Unicorn, bersama Bapak Utian Ayuba (Mantan Pengembangan Blackon OS, Coordinator Asosiasi Cloud Computing dan Pendiri PT. Boer Technology) dan Bapak Zaki Akhyar (System Administator) yang berperan sebagai moderator.</p>
                     <a href="{{ route('registration.talkshow') }}" class="btn-default" >DAFTAR SEKARANG</a>
                 </div>
 
@@ -233,11 +231,11 @@
                         <img src="{{ asset('images/sponsors/long_story.png') }}" alt="Long Story">
                     </div>
                 </div>
-                <div class="item">
+                {{-- <div class="item">
                     <div class="logo">
                         <img src="{{ asset('images/sponsors/alkaysan.png') }}" alt="">
                     </div>
-                </div>
+                </div> --}}
                 <div class="item">
                     <div class="logo">
                         <img src="{{ asset('images/sponsors/auliya_computer.png') }}" alt="">

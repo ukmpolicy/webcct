@@ -147,9 +147,9 @@
             let bp = document.querySelector('#form_bp');
             status.onchange = (e) => {
                 if (e.target.value == 0) {
-                    bs.style.display = 'block';
+                    bp.style.display = 'block';
                 }else {
-                    bs.style.display = 'none';
+                    bp.style.display = 'none';
                 }
             }
         }, 100);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PTExport;
 use App\Mail\AcceptData;
 use App\Mail\DeacceptData;
 use App\Mail\RecheckingData;
@@ -19,6 +20,7 @@ use Illuminate\Http\Request;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Validation\Rule;
+use Maatwebsite\Excel\Facades\Excel;
 
 class TalkshowRegistrationController extends Controller
 {
@@ -119,6 +121,10 @@ class TalkshowRegistrationController extends Controller
         Mail::to($registration->email)->send(new TalkshowAccept(["registration" => $registration]));
 
         return view('user.pages.registration.success', ["attendee" => $registration]);
+    }
+
+    public function export() {
+        return Excel::download(new PTExport, 'peserta_talkshow.xlsx');redirect()->back();
     }
 
     public function attachment(Request $request, int $id, string $key) {

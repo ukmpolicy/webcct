@@ -35,6 +35,7 @@ Route::prefix('manager')->group(function() {
 
     Route::prefix('registration/talkshow')->middleware('auth')->group(function() {
         Route::get('/', [TalkshowRegistrationController::class, 'index'])->name('talkshow');
+        Route::get('/export', [TalkshowRegistrationController::class, 'export'])->name('talkshow.registration.export');
     });
 
     Route::prefix('auth')->group(function() {

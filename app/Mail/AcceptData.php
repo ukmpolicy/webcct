@@ -31,6 +31,6 @@ class AcceptData extends Mailable
     public function build()
     {
         return $this->subject('Ticket Cyber Competition And Talkshow')
-                    ->view('mails.accepted', $this->data);
+                    ->markdown('mails.accepted', $this->data);
     }
 }

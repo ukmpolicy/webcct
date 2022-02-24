@@ -231,14 +231,14 @@
                         <img src="{{ asset('images/sponsors/long_story.png') }}" alt="Long Story">
                     </div>
                 </div>
-                {{-- <div class="item">
-                    <div class="logo">
-                        <img src="{{ asset('images/sponsors/alkaysan.png') }}" alt="">
-                    </div>
-                </div> --}}
                 <div class="item">
                     <div class="logo">
-                        <img src="{{ asset('images/sponsors/auliya_computer.png') }}" alt="">
+                        <img src="{{ asset('images/sponsors/esalfia.png') }}" alt="Esalfia">
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="logo">
+                        <img src="{{ asset('images/sponsors/auliya_computer.png') }}" alt="Aulia Komputer">
                     </div>
                 </div>
             </div>

@@ -221,7 +221,7 @@
                 <div class="section-icon">
                     <img src="{{ asset('images/head.svg') }}" alt="section icon">
                 </div>
-                <h2>Sponsors</h2>
+                <h2>Sponsored By</h2>
             </div>
 
             <!-- Sponsors -->

@@ -1,4 +1,10 @@
-<?php
+('email', 'zulfahmineo@gmail.com')->first();
+
+        // if ($user) {
+        //     $user->notify(new TesNotif());
+        // }
+
+        // dd('success');<?php
 
 namespace App\Mail;
 

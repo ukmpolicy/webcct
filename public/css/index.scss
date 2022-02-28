@@ -272,6 +272,25 @@ p {
             p {
                 width: 70%;
                 margin: auto;
+                font-size: 18px;
+            }
+
+            .speaker {
+                .avatar {
+                    height: 150px;
+                    width: 150px;
+                    border-radius: 50%;
+                    overflow: hidden;
+                    margin: auto;
+                    border: 5px solid lightblue;
+                    img {
+                        position: relative;
+                    }
+                }
+                .name {
+                    font-size: 21px;
+                    font-weight: bold;
+                }
             }
 
             .btn-default {
@@ -301,7 +320,7 @@ p {
 }
 
 #sponsor {
-    background-color: #f7f7f7;
+    // background-color: #f7f7f7;
 
     .container {
         padding-top: 4rem;

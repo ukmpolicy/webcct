@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Exports\PCExport;
 use App\Mail\AcceptData;
 use App\Mail\DeacceptData;
 use App\Mail\RecheckingData;
@@ -15,6 +16,7 @@ use App\Models\Setting;
 use Illuminate\Http\Request;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
 use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
 
 class CompetitionRegistrationController extends Controller
 {
@@ -161,6 +163,10 @@ class CompetitionRegistrationController extends Controller
             $attachment->filename = $filename;
             $attachment->save();
         }
+    }
+
+    public function export(Request $request) {
+        return Excel::download(new PCExport($request), 'peserta_competition.xlsx');redirect()->back();
     }
 
     public function checking($id) {

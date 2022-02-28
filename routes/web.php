@@ -31,6 +31,7 @@ Route::prefix('manager')->group(function() {
     Route::prefix('registration/competition')->middleware('auth')->group(function() {
         Route::get('/', [CompetitionRegistrationController::class, 'index'])->name('competition');
         Route::post('/change_status/{id}', [CompetitionRegistrationController::class, 'changeStatus'])->name('competition.status');
+        Route::get('/export', [CompetitionRegistrationController::class, 'export'])->name('competition.registration.export');
     });
 
     Route::prefix('registration/talkshow')->middleware('auth')->group(function() {

@@ -296,6 +296,25 @@ p {
 #talkshow .inner-bg .container p {
   width: 70%;
   margin: auto;
+  font-size: 18px;
+}
+
+#talkshow .inner-bg .container .speaker .avatar {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
+  border: 5px solid lightblue;
+}
+
+#talkshow .inner-bg .container .speaker .avatar img {
+  position: relative;
+}
+
+#talkshow .inner-bg .container .speaker .name {
+  font-size: 21px;
+  font-weight: bold;
 }
 
 #talkshow .inner-bg .container .btn-default {
@@ -318,10 +337,6 @@ p {
 
 #contact .container form {
   margin: auto;
-}
-
-#sponsor {
-  background-color: #f7f7f7;
 }
 
 #sponsor .container {

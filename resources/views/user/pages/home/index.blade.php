@@ -160,55 +160,41 @@
                     </div>
                     <h2>Talkshow</h2>
                 </div>
+
+                {{-- <div class="speaker">
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="avatar">
+                                <img src="{{ asset('images/speaker/utian.jpeg') }}" style="left: 0px;top:0;" alt="Utian Ayuba">
+                            </div>
+                            <div class="name">Utian Ayuba</div>
+                            <div class="labels">
+                                <div>Former Developer Linux Blankon OS</div>
+                                <div>Coordinator Cloud Computing</div>
+                                <div>CEO PT. Boer Technology</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="avatar text-center">
+                                <img src="{{ asset('images/speaker/zaki.jpeg') }}" style="left: 0;top:0;" alt="Zaki Akhyar">
+                            </div>
+                            <div class="name">Utian Ayuba</div>
+                            <div class="labels">
+                                <div>Former Developer Linux Blankon OS</div>
+                                <div>Coordinator Cloud Computing</div>
+                                <div>CEO PT. Boer Technology</div>
+                            </div>
+                        </div>
+                    </div>
+                </div> --}}
                 
                 <!-- Promot Talkshow -->        
-                <div class="">
+                <div class="text">
                     <p class="text-capitalize">Mari mengenal dan belajar lebih jauh dengan Cloud Computing dan pemanfaatannya dalam membangun Startup Unicorn, bersama Bapak Utian Ayuba (Mantan Pengembangan Blackon OS, Coordinator Asosiasi Cloud Computing dan Pendiri PT. Boer Technology) dan Bapak Zaki Akhyar (System Administator) yang berperan sebagai moderator.</p>
                     <a href="{{ route('registration.talkshow') }}" class="btn-default" >DAFTAR SEKARANG</a>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Form -->
-    <section id="contact">
-        <div class="container">
-            
-            <div class="row">
-                <div class="col-md-6 m-auto">
-
-                    <!-- Header -->
-                    <div class="section-header">
-                        <div class="section-icon">
-                            <img src="{{ asset('images/head.svg') }}" alt="section icon">
-                        </div>
-                        <h2>Hubungi Kami</h2>
-                    </div>
-        
-                    <!-- Form -->
-                    <form action="{{ route('mail.store') }}" method="POST" class="contained-d">
-                        @csrf
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Nama" name="name">
-                            @error('name') <div class="text-danger" style="font-size: 12px">{{ $message }}</div> @enderror
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" placeholder="Email" name="email">
-                            @error('email') <div class="text-danger" style="font-size: 12px">{{ $message }}</div> @enderror
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea cols="30" rows="10" class="form-control" placeholder="Konten" name="content"></textarea>
-                            @error('content') <div class="text-danger" style="font-size: 12px">{{ $message }}</div> @enderror
-                        </div>
-                        <div class="form-group mt-3">
-                            <button class="btn w-100 btn-default">SEND</button>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-
         </div>
     </section>
 

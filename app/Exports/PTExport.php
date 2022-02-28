@@ -9,8 +9,9 @@ class PTExport implements FromArray
 {
 
     public function array() : array
-    {     
-        $registrations = TalkshowRegistration::select('name', 'phone', 'email', 'data')->get()->toArray();
+    {   
+        $fields = ['created_at', 'name', 'phone', 'email', 'city', 'region', 'address', 'birthdate', 'profession', 'institution'];
+        $registrations = TalkshowRegistration::select('created_at', 'name', 'phone', 'email', 'data')->get()->toArray();
         $registrations = array_map(function($reg) {
             $data = json_decode($reg['data'], true);
             $reg = array_merge($reg, $data);
@@ -18,6 +19,6 @@ class PTExport implements FromArray
             return $reg;
         }, $registrations);
 
-        return $registrations;
+        return array_merge([$fields], $registrations);
     }
 }

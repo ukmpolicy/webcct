@@ -40,7 +40,7 @@
           <div class="card-body">
             
             <div class="d-lg-flex" style="justify-content: space-between">
-              <div class="d-flex">
+              <div class="d-flex align-items-center">
                 <form action="" method="get" id="status">
                   <input type="hidden" name="search" value="{{ Request::get('search') }}">
                   <input type="hidden" name="page" value="{{ Request::get('page') }}">
@@ -53,6 +53,7 @@
                     @endforeach
 
                   </select>
+                  <a href="{{ route('competition.registration.export') }}" class="btn mb-2 btn-success"><i class="fa fa-file-export fa-fw"></i> Export</a>
                 </form>
               </div>
               <form class="d-flex" method="GET" action="">

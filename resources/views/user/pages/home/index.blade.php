@@ -201,6 +201,22 @@
     <!-- Sponsor -->
     <section id="sponsor">
         <div class="container">
+            <!-- Header -->
+            <div class="section-header">
+                <div class="section-icon">
+                    <img src="{{ asset('images/head.svg') }}" alt="section icon">
+                </div>
+                <h2>Media Partner</h2>
+            </div>
+
+            <!-- Sponsors -->
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="logo">
+                        <img src="{{ asset('images/sponsors/karya_media.png') }}" alt="Karya Media">
+                    </div>
+                </div>
+            </div>
 
             <!-- Header -->
             <div class="section-header">

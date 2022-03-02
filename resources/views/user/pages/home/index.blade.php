@@ -210,19 +210,19 @@
             </div>
 
             <!-- Sponsors -->
-            <div class="owl-carousel owl-theme" id="media_partners">
-                <div class="item">
-                    <div class="logo">
-                        <img src="{{ asset('images/sponsors/karya_media.png') }}" alt="Karya Media">
-                    </div>
-                </div>
+            <div class="logo media_parner">
+                <img src="{{ asset('images/sponsors/karya_media.png') }}" alt="Karya Media">
             </div>
+            {{-- <div class="owl-carousel owl-theme" id="media_partners">
+                <div class="item">
+                </div>
+            </div> --}}
 
             <!-- Header -->
             <div class="section-header">
-                <div class="section-icon">
+                {{-- <div class="section-icon">
                     <img src="{{ asset('images/head.svg') }}" alt="section icon">
-                </div>
+                </div> --}}
                 <h2>Sponsored By</h2>
             </div>
 

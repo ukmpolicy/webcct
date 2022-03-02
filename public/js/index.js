@@ -15,12 +15,12 @@ $('#sponsors').owlCarousel({
         }
     }
 })
-$('#media_partners').owlCarousel({
-    nav: false,
+// $('#media_partners').owlCarousel({
+//     nav: false,
     // loop: true,
     // autoplay: true,
     // center: true,
-    items: 1
+    // items: 1
     // responsive:{
     //     0:{
     //     },
@@ -31,7 +31,7 @@ $('#media_partners').owlCarousel({
     //         items: 4
     //     }
     // }
-})
+// })
 
 let price = 0;
 

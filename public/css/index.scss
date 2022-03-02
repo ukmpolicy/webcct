@@ -326,6 +326,14 @@ p {
         padding-top: 4rem;
         padding-bottom: 4rem;
 
+        .media_parner {
+            text-align: center;
+            margin: auto;
+            margin-bottom: 5rem;
+            img {
+                height: 80px;
+            }
+        }
         .owl-carousel {
             .logo {
                 img {

@@ -344,6 +344,16 @@ p {
   padding-bottom: 4rem;
 }
 
+#sponsor .container .media_parner {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 5rem;
+}
+
+#sponsor .container .media_parner img {
+  height: 80px;
+}
+
 #sponsor .container .owl-carousel .logo img {
   margin: auto;
   height: 150px;

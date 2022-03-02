@@ -1,4 +1,4 @@
-$('.owl-carousel').owlCarousel({
+$('#sponsors').owlCarousel({
     nav: false,
     loop: true,
     autoplay: true,
@@ -14,6 +14,23 @@ $('.owl-carousel').owlCarousel({
             items: 4
         }
     }
+})
+$('#media_partners').owlCarousel({
+    nav: false,
+    // loop: true,
+    // autoplay: true,
+    // center: true,
+    items: 1
+    // responsive:{
+    //     0:{
+    //     },
+    //     600:{
+    //         items: 2
+    //     },
+    //     1000:{
+    //         items: 4
+    //     }
+    // }
 })
 
 let price = 0;

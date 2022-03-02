@@ -210,7 +210,7 @@
             </div>
 
             <!-- Sponsors -->
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme" id="media_partners">
                 <div class="item">
                     <div class="logo">
                         <img src="{{ asset('images/sponsors/karya_media.png') }}" alt="Karya Media">
@@ -227,7 +227,7 @@
             </div>
 
             <!-- Sponsors -->
-            <div class="owl-carousel owl-theme">
+            <div class="owl-carousel owl-theme" id="sponsors">
                 <div class="item">
                     <div class="logo">
                         <img src="{{ asset('images/sponsors/long_story.png') }}" alt="Long Story">

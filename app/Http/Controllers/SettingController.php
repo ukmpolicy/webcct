@@ -17,6 +17,8 @@ class SettingController extends Controller
         "talkshow_opening_registration",
         "talkshow_closing_registration",
         "talkshow_status_registration",
+        "talkshow_checkin_status",
+        "talkshow_checkin_level",
     ];
 
     public function index() {

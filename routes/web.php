@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AttendeeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CheckinController;
 use App\Http\Controllers\CompetitionRegistrationController;
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\RegistrationController;
@@ -93,6 +94,12 @@ Route::prefix('registration')->group(function() {
     
     Route::get('/talkshow', [TalkshowRegistrationController::class, 'formRegistration'])->name('registration.talkshow');     
     Route::post('/talkshow', [TalkshowRegistrationController::class, 'store'])->name('registration.talkshow.store');
+});
+
+Route::prefix('checkin')->group(function() {
+
+    Route::get('/', [CheckinController::class, 'index'])->name('checkin');
+    Route::post('/', [CheckinController::class, 'checkIn'])->name('checkin.check');
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

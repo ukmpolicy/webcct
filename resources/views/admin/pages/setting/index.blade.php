@@ -67,18 +67,18 @@
             
             <h5 class="mt-5"># Talkshow</h5>
             <div class="mb-3">
-              <label for="terms_talkshow">Status Pendaftaran:</label>
+              <label for="">Status Pendaftaran:</label>
               <select name="talkshow_status_registration" class="form-control">
                 <option value="0" @if ($settings['talkshow_status_registration'] == 0) selected @endif>Tutup</option>
                 <option value="1" @if ($settings['talkshow_status_registration'] == 1) selected @endif>Buka</option>
               </select>
             </div>
             <div class="mb-3">
-                <label for="terms_talkshow">Jadwal Buka Pendaftaran:</label>
+                <label for="">Jadwal Buka Pendaftaran:</label>
                 <input type="datetime-local" value="{{ $settings['talkshow_opening_registration'] }}" name="talkshow_opening_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
-                <label for="terms_talkshow">Jadwal Tutup Pendaftaran:</label>
+                <label for="">Jadwal Tutup Pendaftaran:</label>
                 <input type="datetime-local" value="{{ $settings['talkshow_closing_registration'] }}" name="talkshow_closing_registration" placeholder="Jadwal Buka Pendaftaran..." class="form-control">
             </div>
             <div class="mb-3">
@@ -86,6 +86,23 @@
                 <div class="waiteditor small text-black-50">Sedang memuat editor...</div>
                 <textarea name="terms_talkshow" id="terms_talkshow" class="form-control d-none">{{ $settings['terms_talkshow'] }}</textarea>
             </div>
+
+            <h5 class="mt-5"># Presensi</h5>
+            <div class="mb-3">
+              <label for="">Status Presensi:</label>
+              <select name="talkshow_checkin_status" class="form-control">
+                <option value="0" @if ($settings['talkshow_checkin_status'] == 0) selected @endif>Tutup</option>
+                <option value="1" @if ($settings['talkshow_checkin_status'] == 1) selected @endif>Buka</option>
+              </select>
+            </div>            
+            <div class="mb-3">
+              <label for="">Level Presensi:</label>
+              <select name="talkshow_checkin_level" class="form-control">
+                <option value="0" @if ($settings['talkshow_checkin_level'] == 1) selected @endif>Satu</option>
+                <option value="1" @if ($settings['talkshow_checkin_level'] == 2) selected @endif>Dua</option>
+              </select>
+            </div>
+
             
         </div>
       </div>

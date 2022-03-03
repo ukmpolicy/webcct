@@ -6,6 +6,9 @@
         $max = $i + 2 > $maxPage ? $maxPage : $i + 2;
     @endphp
 
+    @if ($page > 2)
+    <li class="page-item"><button class="page-link" name="page" value="1">1</button></li>
+    @endif
     @if ($page > 1)
         <li class="page-item"><button class="page-link" name="page"
                 value="{{ $page - 1 }}">&laquo;</button></li>
@@ -22,7 +25,7 @@
         <li class="page-item"><button class="page-link" name="page"
                 value="{{ $page + 1 }}">&raquo;</button></li>
     @endif
-    @if ($page < $maxPage)
+    @if ($page < $maxPage-1)
         <li class="page-item"><button class="page-link" name="page" value="{{ $maxPage }}">{{ $maxPage }}</button></li>
     @endif
 </ul>

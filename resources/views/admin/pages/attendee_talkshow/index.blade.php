@@ -85,7 +85,7 @@
                 @endphp
                   
                 <tr>
-                  <td>{{ ($page*$perPage)+$loop->iteration }}</td>
+                  <td>{{ (($page-1)*$perPage)+$loop->iteration }}</td>
                   <td>{{ $registration->name }}</td>
                   <td>{{ $registration->email }}</td>
                   <td>{{ $registration->phone }}</td>

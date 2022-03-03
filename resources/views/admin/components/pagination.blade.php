@@ -22,4 +22,7 @@
         <li class="page-item"><button class="page-link" name="page"
                 value="{{ $page + 1 }}">&raquo;</button></li>
     @endif
+    @if ($i <= $max)
+        <li class="page-item"><button class="page-link" name="page" value="{{ $maxPage }}">{{ $maxPage }}</button></li>
+    @endif
 </ul>

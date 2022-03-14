@@ -103,4 +103,5 @@ Route::prefix('checkin')->group(function() {
 });
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 // Route::get('/', [RegistrationController::class, 'test2'])->name('home');

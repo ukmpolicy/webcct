@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/tes', [App\Http\Controllers\HomeController::class, 'tesPost'])->name('home.tespost');

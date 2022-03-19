@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
 </head>
 <body>
-
+    
     <!-- Navbar -->
     <nav id="navbar">
         <div class="container">

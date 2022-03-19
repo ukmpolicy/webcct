@@ -30,6 +30,7 @@ class TalkshowRegistrationController extends Controller
         "birthdate", "region", "city", "address", "institution", "profession"
     ];
 
+
     public function index(Request $request) {
         $registrations = $this->getRegistrations($request);
         $page = 1;

@@ -16,7 +16,7 @@ class HomeController extends Controller
     
     public function index()
     {
-        return Excel::download(new DataPeserta(), 'peserta_talkshow.xlsx');
+        // return Excel::download(new DataPeserta(), 'peserta_talkshow.xlsx');
         // Mail::to('zulfahmineo@gmail.com')->send(new TestMail());
         // $user = TalkshowRegistration::where('email', 'zulfahmineo@gmail.com')->first();
 
@@ -27,7 +27,7 @@ class HomeController extends Controller
         // dd('success');
 
 
-        // return view('user.pages.home.index');
+        return view('user.pages.home.index');
     }
 
     public function tesPost() {

@@ -19,7 +19,7 @@ class PTExport implements FromArray
             unset($reg['data']);
             return $reg;
         }, $registrations);
-
+ 
         return array_merge([$fields], $registrations);
     }
 }

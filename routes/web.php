@@ -23,69 +23,69 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('manager')->group(function() {
+// Route::prefix('manager')->group(function() {
 
-    Route::get('/', function() {
-        return view('admin.pages.dashboard.index');
-    })->name('dashboard')->middleware('auth');
+//     Route::get('/', function() {
+//         return view('admin.pages.dashboard.index');
+//     })->name('dashboard')->middleware('auth');
 
-    Route::prefix('registration/competition')->middleware('auth')->group(function() {
-        Route::get('/', [CompetitionRegistrationController::class, 'index'])->name('competition');
-        Route::post('/change_status/{id}', [CompetitionRegistrationController::class, 'changeStatus'])->name('competition.status');
-        Route::get('/export', [CompetitionRegistrationController::class, 'export'])->name('competition.registration.export');
-    });
+//     Route::prefix('registration/competition')->middleware('auth')->group(function() {
+//         Route::get('/', [CompetitionRegistrationController::class, 'index'])->name('competition');
+//         Route::post('/change_status/{id}', [CompetitionRegistrationController::class, 'changeStatus'])->name('competition.status');
+//         Route::get('/export', [CompetitionRegistrationController::class, 'export'])->name('competition.registration.export');
+//     });
 
-    Route::prefix('registration/talkshow')->middleware('auth')->group(function() {
-        Route::get('/', [TalkshowRegistrationController::class, 'index'])->name('talkshow');
-        Route::get('/export', [TalkshowRegistrationController::class, 'export'])->name('talkshow.registration.export');
-    });
+//     Route::prefix('registration/talkshow')->middleware('auth')->group(function() {
+//         Route::get('/', [TalkshowRegistrationController::class, 'index'])->name('talkshow');
+//         Route::get('/export', [TalkshowRegistrationController::class, 'export'])->name('talkshow.registration.export');
+//     });
 
-    Route::prefix('auth')->group(function() {
-        Route::get('/login', [AuthController::class, 'loginView'])
-        ->name('login');
+//     Route::prefix('auth')->group(function() {
+//         Route::get('/login', [AuthController::class, 'loginView'])
+//         ->name('login');
     
-        Route::post('/login', [AuthController::class, 'login'])
-        ->name('login');
+//         Route::post('/login', [AuthController::class, 'login'])
+//         ->name('login');
         
-        Route::post('/logout', [AuthController::class, 'logout'])
-        ->name('logout');
-    });
+//         Route::post('/logout', [AuthController::class, 'logout'])
+//         ->name('logout');
+//     });
 
-    Route::prefix('user')->group(function() {
-        Route::get('/', [UserController::class, 'index'])
-        ->name('user');
-        Route::post('/', [UserController::class, 'store'])
-        ->name('user.store');
-        Route::put('/{id}', [UserController::class, 'update'])
-        ->name('user.update');
-        Route::delete('/{id}', [UserController::class, 'destroy'])
-        ->name('user.destroy');
-    });
+//     Route::prefix('user')->group(function() {
+//         Route::get('/', [UserController::class, 'index'])
+//         ->name('user');
+//         Route::post('/', [UserController::class, 'store'])
+//         ->name('user.store');
+//         Route::put('/{id}', [UserController::class, 'update'])
+//         ->name('user.update');
+//         Route::delete('/{id}', [UserController::class, 'destroy'])
+//         ->name('user.destroy');
+//     });
     
-    Route::prefix('mail')->middleware('auth')->group(function() {
-        Route::get('/', [MailController::class, 'index'])
-        ->name('mail');
+//     Route::prefix('mail')->middleware('auth')->group(function() {
+//         Route::get('/', [MailController::class, 'index'])
+//         ->name('mail');
 
-        Route::post('/', [MailController::class, 'store'])
-        ->name('mail.store');
+//         Route::post('/', [MailController::class, 'store'])
+//         ->name('mail.store');
         
-        Route::post('/reply/{id}', [MailController::class, 'reply'])
-        ->name('mail.reply');
+//         Route::post('/reply/{id}', [MailController::class, 'reply'])
+//         ->name('mail.reply');
         
-        Route::get('/show/{id}', [MailController::class, 'show'])
-        ->name('mail.detail');
+//         Route::get('/show/{id}', [MailController::class, 'show'])
+//         ->name('mail.detail');
         
-        Route::delete('/{id}', [MailController::class, 'destroy'])
-        ->name('mail.destroy');
-    });
+//         Route::delete('/{id}', [MailController::class, 'destroy'])
+//         ->name('mail.destroy');
+//     });
 
-    Route::prefix('setting')->middleware('auth')->group(function() {
-        Route::get('/', [SettingController::class, 'index'])
-        ->name('setting');
-        Route::post('/', [SettingController::class, 'save'])
-        ->name('setting.save');
-    });
-});
+//     Route::prefix('setting')->middleware('auth')->group(function() {
+//         Route::get('/', [SettingController::class, 'index'])
+//         ->name('setting');
+//         Route::post('/', [SettingController::class, 'save'])
+//         ->name('setting.save');
+//     });
+// });
 
 Route::prefix('registration')->group(function() {
 
